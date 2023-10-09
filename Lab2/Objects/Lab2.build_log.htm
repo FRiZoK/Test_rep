@@ -1,0 +1,92 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Nikita sivov, nixxen, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.164.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\super\Documents\TsUiMP\Lab2\Lab2.uvprojx
+Project File Date:  12/02/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+main.c(9): warning: no previous extern declaration for non-static variable 'array_original' [-Wmissing-variable-declarations]
+int32_t array_original [] = {45, 63, 12, 54, 9, 36, 19, 32}; //2D, 3F, 0C, 36, 09, 24, 13, 20
+        ^
+main.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int32_t array_original [] = {45, 63, 12, 54, 9, 36, 19, 32}; //2D, 3F, 0C, 36, 09, 24, 13, 20
+^
+main.c(12): warning: no previous extern declaration for non-static variable 'array_result' [-Wmissing-variable-declarations]
+int32_t* array_result = NULL;
+         ^
+main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int32_t* array_result = NULL;
+^
+main.c(28): warning: no previous extern declaration for non-static variable 'new_array' [-Wmissing-variable-declarations]
+int32_t new_array [sizeof(array_original)/sizeof(int32_t)]= {0};
+        ^
+main.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int32_t new_array [sizeof(array_original)/sizeof(int32_t)]= {0};
+^
+main.c(40): warning: 'return' will never be executed [-Wunreachable-code-return]
+        return 0;
+               ^
+main.c(45): warning: declaration shadows a variable in the global scope [-Wshadow]
+        int32_t *new_array = NULL;
+                 ^
+main.c(28): note: previous declaration is here
+int32_t new_array [sizeof(array_original)/sizeof(int32_t)]= {0};
+        ^
+main.c(49): warning: implicitly declaring library function 'malloc' with type 'void *(unsigned int)' [-Wimplicit-function-declaration]
+        new_array =  (int32_t*) (malloc(array_size));
+                                 ^
+main.c(49): note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+main.c(72): warning: comparison of integers of different signs: 'int32_t' (aka 'int') and 'size_t' (aka 'unsigned int') [-Wsign-compare]
+        while (i < array_size)
+               ~ ^ ~~~~~~~~~~
+main.c(100): warning: no newline at end of file [-Wnewline-eof]
+/********************************************************************************/
+                                                                                  ^
+main.c(90): warning: comparison of integers of different signs: 'int32_t' (aka 'int') and 'size_t' (aka 'unsigned int') [-Wsign-compare]
+        while (i < array_size)
+               ~ ^ ~~~~~~~~~~
+9 warnings generated.
+compiling main.c...
+assembling main_1.s...
+assembling startup.s...
+linking...
+Program Size: Code=1344 RO-data=40 RW-data=32 ZI-data=1672  
+".\Objects\Lab2.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\super\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
